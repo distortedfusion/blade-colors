@@ -28,7 +28,7 @@ composer require distortedfusion/blade-colors
 
 *This package implements Laravel's Package Discovery, no further changes are needed to your application configurations. For more information [please refer to the Laravel documentation](https://laravel.com/docs/packages#package-discovery).*
 
-After installation the CSS variables need to be added to your main application layout. This is done by adding the `@bladeColor` directive to you layouts `<head>` section:
+After installation the CSS variables need to be added to your main application layout. This is done by adding the `@bladeColor` directive to your layouts `<head>` section:
 
 ```html
 <html>
