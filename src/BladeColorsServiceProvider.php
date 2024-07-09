@@ -14,8 +14,8 @@ class BladeColorsServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        if (! defined('DF_BC_PATH')) {
-            define('DF_BC_PATH', realpath(__DIR__.'/../'));
+        if (! defined('DF_BLADE_COLORS_PATH')) {
+            define('DF_BLADE_COLORS_PATH', realpath(__DIR__.'/../'));
         }
     }
 
@@ -35,14 +35,14 @@ class BladeColorsServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                DF_BC_PATH.'/resources/views' => resource_path('views/vendor/blade-colors'),
+                DF_BLADE_COLORS_PATH.'/resources/views' => resource_path('views/vendor/blade-colors'),
             ], 'blade-colors-views');
         }
     }
 
     private function registerResources(): void
     {
-        $this->loadViewsFrom(DF_BC_PATH.'/resources/views', 'blade-colors');
+        $this->loadViewsFrom(DF_BLADE_COLORS_PATH.'/resources/views', 'blade-colors');
     }
 
     private function registerDirectives(): void
