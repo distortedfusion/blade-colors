@@ -1,8 +1,9 @@
 <?php
 
-namespace DistortedFusion\BladeForms;
+namespace DistortedFusion\BladeColors;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\View\Compilers\BladeCompiler;
 
 class BladeColorsServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,7 @@ class BladeColorsServiceProvider extends ServiceProvider
     {
         $this->offerPublishing();
         $this->registerResources();
+        $this->registerDirectives();
     }
 
     private function offerPublishing(): void
@@ -41,5 +43,14 @@ class BladeColorsServiceProvider extends ServiceProvider
     private function registerResources(): void
     {
         $this->loadViewsFrom(DF_BC_PATH.'/resources/views', 'blade-colors');
+    }
+
+    private function registerDirectives(): void
+    {
+        $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
+            $blade->directive('bladeColors', function (): string {
+                return "<?php echo \DistortedFusion\BladeColors\Facades\BladeColors::renderStyles() ?>";
+            });
+        });
     }
 }
