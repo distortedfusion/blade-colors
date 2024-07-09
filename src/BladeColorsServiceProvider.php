@@ -3,9 +3,8 @@
 namespace DistortedFusion\BladeForms;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\View\Compilers\BladeCompiler;
 
-class BladeFormsServiceProvider extends ServiceProvider
+class BladeColorsServiceProvider extends ServiceProvider
 {
     /**
      * Register the service provider.
