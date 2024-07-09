@@ -2,13 +2,10 @@
 
 namespace DistortedFusion\BladeColors\Facades;
 
+use DistortedFusion\BladeColors\ColorManager;
 use Illuminate\Support\Facades\Facade;
-use Reinbier\PhpTailwindColors\ColorManager;
 
-/**
- * @mixin ColorManager
- */
-class BladeColors extends Facade
+class BladeColor extends Facade
 {
     protected static function getFacadeAccessor(): string
     {

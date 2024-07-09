@@ -1,13 +1,10 @@
 <?php
 
-namespace DistortedFusion\BladeColors;
+namespace DistortedFusion\BladeColors\Palettes;
 
-use Spatie\Color\Hex;
-use Spatie\Color\Rgb;
-
-class Color
+class Tailwind
 {
-    public const Slate = [
+    public const SLATE = [
         50 => '248, 250, 252',
         100 => '241, 245, 249',
         200 => '226, 232, 240',
@@ -21,7 +18,7 @@ class Color
         950 => '2, 6, 23',
     ];
 
-    public const Gray = [
+    public const GRAY = [
         50 => '249, 250, 251',
         100 => '243, 244, 246',
         200 => '229, 231, 235',
@@ -35,7 +32,7 @@ class Color
         950 => '3, 7, 18',
     ];
 
-    public const Zinc = [
+    public const ZINC = [
         50 => '250, 250, 250',
         100 => '244, 244, 245',
         200 => '228, 228, 231',
@@ -49,7 +46,7 @@ class Color
         950 => '9, 9, 11',
     ];
 
-    public const Neutral = [
+    public const NEUTRAL = [
         50 => '250, 250, 250',
         100 => '245, 245, 245',
         200 => '229, 229, 229',
@@ -63,7 +60,7 @@ class Color
         950 => '10, 10, 10',
     ];
 
-    public const Stone = [
+    public const STONE = [
         50 => '250, 250, 249',
         100 => '245, 245, 244',
         200 => '231, 229, 228',
@@ -77,7 +74,7 @@ class Color
         950 => '12, 10, 9',
     ];
 
-    public const Red = [
+    public const RED = [
         50 => '254, 242, 242',
         100 => '254, 226, 226',
         200 => '254, 202, 202',
@@ -91,7 +88,7 @@ class Color
         950 => '69, 10, 10',
     ];
 
-    public const Orange = [
+    public const ORANGE = [
         50 => '255, 247, 237',
         100 => '255, 237, 213',
         200 => '254, 215, 170',
@@ -105,7 +102,7 @@ class Color
         950 => '67, 20, 7',
     ];
 
-    public const Amber = [
+    public const AMBER = [
         50 => '255, 251, 235',
         100 => '254, 243, 199',
         200 => '253, 230, 138',
@@ -119,7 +116,7 @@ class Color
         950 => '69, 26, 3',
     ];
 
-    public const Yellow = [
+    public const YELLOW = [
         50 => '254, 252, 232',
         100 => '254, 249, 195',
         200 => '254, 240, 138',
@@ -133,7 +130,7 @@ class Color
         950 => '66, 32, 6',
     ];
 
-    public const Lime = [
+    public const LIME = [
         50 => '247, 254, 231',
         100 => '236, 252, 203',
         200 => '217, 249, 157',
@@ -147,7 +144,7 @@ class Color
         950 => '26, 46, 5',
     ];
 
-    public const Green = [
+    public const GREEN = [
         50 => '240, 253, 244',
         100 => '220, 252, 231',
         200 => '187, 247, 208',
@@ -161,7 +158,7 @@ class Color
         950 => '5, 46, 22',
     ];
 
-    public const Emerald = [
+    public const EMERALD = [
         50 => '236, 253, 245',
         100 => '209, 250, 229',
         200 => '167, 243, 208',
@@ -175,7 +172,7 @@ class Color
         950 => '2, 44, 34',
     ];
 
-    public const Teal = [
+    public const TEAL = [
         50 => '240, 253, 250',
         100 => '204, 251, 241',
         200 => '153, 246, 228',
@@ -189,7 +186,7 @@ class Color
         950 => '4, 47, 46',
     ];
 
-    public const Cyan = [
+    public const CYAN = [
         50 => '236, 254, 255',
         100 => '207, 250, 254',
         200 => '165, 243, 252',
@@ -203,7 +200,7 @@ class Color
         950 => '8, 51, 68',
     ];
 
-    public const Sky = [
+    public const SKY = [
         50 => '240, 249, 255',
         100 => '224, 242, 254',
         200 => '186, 230, 253',
@@ -217,7 +214,7 @@ class Color
         950 => '8, 47, 73',
     ];
 
-    public const Blue = [
+    public const BLUE = [
         50 => '239, 246, 255',
         100 => '219, 234, 254',
         200 => '191, 219, 254',
@@ -231,7 +228,7 @@ class Color
         950 => '23, 37, 84',
     ];
 
-    public const Indigo = [
+    public const INDIGO = [
         50 => '238, 242, 255',
         100 => '224, 231, 255',
         200 => '199, 210, 254',
@@ -245,7 +242,7 @@ class Color
         950 => '30, 27, 75',
     ];
 
-    public const Violet = [
+    public const VIOLET = [
         50 => '245, 243, 255',
         100 => '237, 233, 254',
         200 => '221, 214, 254',
@@ -259,7 +256,7 @@ class Color
         950 => '46, 16, 101',
     ];
 
-    public const Purple = [
+    public const PURPLE = [
         50 => '250, 245, 255',
         100 => '243, 232, 255',
         200 => '233, 213, 255',
@@ -273,7 +270,7 @@ class Color
         950 => '59, 7, 100',
     ];
 
-    public const Fuchsia = [
+    public const FUCHSIA = [
         50 => '253, 244, 255',
         100 => '250, 232, 255',
         200 => '245, 208, 254',
@@ -287,7 +284,7 @@ class Color
         950 => '74, 4, 78',
     ];
 
-    public const Pink = [
+    public const PINK = [
         50 => '253, 242, 248',
         100 => '252, 231, 243',
         200 => '251, 207, 232',
@@ -301,7 +298,7 @@ class Color
         950 => '80, 7, 36',
     ];
 
-    public const Rose = [
+    public const ROSE = [
         50 => '255, 241, 242',
         100 => '255, 228, 230',
         200 => '254, 205, 211',
@@ -316,93 +313,33 @@ class Color
     ];
 
     /**
-     * @param string $color
-     *
-     * @return array{50: string, 100: string, 200: string, 300: string, 400: string, 500: string, 600: string, 700: string, 800: string, 900: string, 950: string}
-     */
-    public static function hex(string $color): array
-    {
-        return static::generateShades(Hex::fromString($color)->toRgb());
-    }
-
-    /**
-     * @param string $color
-     *
-     * @return array{50: string, 100: string, 200: string, 300: string, 400: string, 500: string, 600: string, 700: string, 800: string, 900: string, 950: string}
-     */
-    public static function rgb(string $color): array
-    {
-        return static::generateShades(Rgb::fromString($color));
-    }
-
-    /**
-     * @param Rgb $color
-     *
-     * @return array{50: string, 100: string, 200: string, 300: string, 400: string, 500: string, 600: string, 700: string, 800: string, 900: string, 950: string}
-     */
-    protected static function generateShades(Rgb $color): array
-    {
-        $colors = [];
-
-        $intensityMap = [
-            50 => 0.95,
-            100 => 0.9,
-            200 => 0.75,
-            300 => 0.6,
-            400 => 0.3,
-            500 => 1.0,
-            600 => 0.9,
-            700 => 0.75,
-            800 => 0.6,
-            900 => 0.49,
-            950 => 0.3,
-        ];
-
-        foreach ($intensityMap as $shade => $intensity) {
-            if ($shade < 500) {
-                $red = ((255 - $color->red()) * $intensity) + $color->red();
-                $green = ((255 - $color->green()) * $intensity) + $color->green();
-                $blue = ((255 - $color->blue()) * $intensity) + $color->blue();
-            } else {
-                $red = $color->red() * $intensity;
-                $green = $color->green() * $intensity;
-                $blue = $color->blue() * $intensity;
-            }
-
-            $colors[$shade] = sprintf('%s, %s, %s', round($red), round($green), round($blue));
-        }
-
-        return $colors;
-    }
-
-    /**
      * @return array<string, array{50: string, 100: string, 200: string, 300: string, 400: string, 500: string, 600: string, 700: string, 800: string, 900: string, 950: string}>
      */
     public static function all(): array
     {
         return [
-            'slate' => static::Slate,
-            'gray' => static::Gray,
-            'zinc' => static::Zinc,
-            'neutral' => static::Neutral,
-            'stone' => static::Stone,
-            'red' => static::Red,
-            'orange' => static::Orange,
-            'amber' => static::Amber,
-            'yellow' => static::Yellow,
-            'lime' => static::Lime,
-            'green' => static::Green,
-            'emerald' => static::Emerald,
-            'teal' => static::Teal,
-            'cyan' => static::Cyan,
-            'sky' => static::Sky,
-            'blue' => static::Blue,
-            'indigo' => static::Indigo,
-            'violet' => static::Violet,
-            'purple' => static::Purple,
-            'fuchsia' => static::Fuchsia,
-            'pink' => static::Pink,
-            'rose' => static::Rose,
+            'slate' => static::SLATE,
+            'gray' => static::GRAY,
+            'zinc' => static::ZINC,
+            'neutral' => static::NEUTRAL,
+            'stone' => static::STONE,
+            'red' => static::RED,
+            'orange' => static::ORANGE,
+            'amber' => static::AMBER,
+            'yellow' => static::YELLOW,
+            'lime' => static::LIME,
+            'green' => static::GREEN,
+            'emerald' => static::EMERALD,
+            'teal' => static::TEAL,
+            'cyan' => static::CYAN,
+            'sky' => static::SKY,
+            'blue' => static::BLUE,
+            'indigo' => static::INDIGO,
+            'violet' => static::VIOLET,
+            'purple' => static::PURPLE,
+            'fuchsia' => static::FUCHSIA,
+            'pink' => static::PINK,
+            'rose' => static::ROSE,
         ];
     }
 }

@@ -48,8 +48,8 @@ class BladeColorsServiceProvider extends ServiceProvider
     private function registerDirectives(): void
     {
         $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
-            $blade->directive('bladeColors', function (): string {
-                return "<?php echo \DistortedFusion\BladeColors\Facades\BladeColors::renderStyles() ?>";
+            $blade->directive('bladeColor', function (): string {
+                return "<?php echo \DistortedFusion\BladeColors\Facades\BladeColor::renderStyles() ?>";
             });
         });
     }
