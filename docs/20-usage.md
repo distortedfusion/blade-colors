@@ -119,7 +119,7 @@ By default Blade Colors comes with 6 predefined color definitions using the prov
     </div>
 ```
 
-## Using Color Definitions
+## Using CSS Variables
 
 All configured color definitions are included in the `@bladeColor` directive, which has been added to the `<head>` section [during installation](/docs/distortedfusion/blade-colors/getting-started), and are generated as CSS variables.
 
@@ -133,7 +133,7 @@ To use the generated CSS variables you simply supply them as ["Arbitrary Values"
 <div class="bg-[rgb(var(--primary-500))]"></div>
 ```
 
-## Using Color Definitions as CSS Classes
+## Using CSS Classes
 
 Optionally you can import the default color definitions in your existing `tailwind.config.js` file. This simplifies the usage by removing the need to supply the CSS variable as arbitrary values and instead offers the color definition as a CSS class like:
 
