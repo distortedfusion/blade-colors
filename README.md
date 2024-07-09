@@ -2,7 +2,7 @@
 
 [![Latest Version](https://img.shields.io/github/tag/distortedfusion/blade-colors.svg?style=flat-square)](https://github.com/distortedfusion/blade-colors/tags)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![Build Status](https://img.shields.io/github/workflow/status/distortedfusion/blade-colors/CI-CD/master?style=flat-square)](https://github.com/distortedfusion/blade-colors/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/distortedfusion/blade-colors/ci.yml?branch=master&style=flat-square)](https://github.com/distortedfusion/blade-colors/actions)
 
 Blade Colors offers [Tailwind CSS](https://tailwindcss.com/) compatible, CSS variable based, color palettes. Color definitions can be configured dynamically during runtime using the provided [color manager](/docs/distortedfusion/blade-colors/usage).
 
