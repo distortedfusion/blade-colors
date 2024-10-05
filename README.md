@@ -4,7 +4,7 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/distortedfusion/blade-colors/ci.yml?branch=master&style=flat-square)](https://github.com/distortedfusion/blade-colors/actions)
 
-Blade Colors offers [Tailwind CSS](https://tailwindcss.com/) compatible, CSS variable based, color palettes. Color definitions can be configured dynamically during runtime using the provided [color manager](/docs/distortedfusion/blade-colors/usage).
+Blade Colors offers [Tailwind CSS](https://tailwindcss.com/) compatible, CSS variable based, color palettes. Color definitions can be configured dynamically during runtime using the provided [color manager](https://distortedfusion.com/docs/distortedfusion/blade-colors/usage).
 
 ```php
 <?php
@@ -24,7 +24,7 @@ BladeColor::register(['primary' => Tailwind::INDIGO]);
 
 ## Documentation
 
-You will find full documentation on the dedicated [documentation](https://distortedfusion.com/docs/distortedfusion/blade-colors) site.
+You will find full documentation on the dedicated [documentation](https://distortedfusion.com/docs/distortedfusion/blade-colors/getting-started) site.
 
 ## Testing
 
