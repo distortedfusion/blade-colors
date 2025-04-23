@@ -67,10 +67,16 @@ class ColorManager
             $variables = [];
 
             foreach ($shades as $shade => $color) {
-                $variables["{$name}-{$shade}"] = $color;
+                if (! is_null($color) && ! empty($color)) {
+                    $variables["{$name}-{$shade}"] = $color;
+                }
             }
 
             return $variables;
+        }
+
+        if (is_null($shades) || empty($shades)) {
+            return [];
         }
 
         return ["{$name}" => $shades];
