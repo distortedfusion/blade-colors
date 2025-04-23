@@ -44,14 +44,30 @@ class ColorManager
         $variables = [];
 
         foreach ($this->getColors() as $name => $shades) {
-            foreach ($shades as $shade => $color) {
-                $variables["{$name}-{$shade}"] = $color;
-            }
+            $variables = [
+                ...$variables,
+                ...$this->mapShades(name: $name, shades: $shades),
+            ];
         }
 
         return view('blade-colors::assets', [
             'colorVariables' => $variables,
         ])->render();
+    }
+
+    private function mapShades(string $name, array|string $shades): array
+    {
+        if (is_array($shades)) {
+            $variables = [];
+
+            foreach ($shades as $shade => $color) {
+                $variables["{$name}-{$shade}"] = $color;
+            }
+
+            return $variables;
+        }
+
+        return ["{$name}" => $shades];
     }
 
     public static function defaultColors(): array
