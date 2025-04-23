@@ -13,26 +13,30 @@ class ColorManager
 
     protected array $colors = [];
 
-    /**
-     * @param array<string, array{50: string, 100: string, 200: string, 300: string, 400: string, 500: string, 600: string, 700: string, 800: string, 900: string, 950: string}|string> $colors
-     */
-    public function register(array $colors): static
+    public function register(array $colors, ?string $theme = null): static
     {
-        $this->colors[] = $colors;
+        $theme = is_null($theme) ? 'root' : $theme;
+
+        $this->colors[$theme] = [
+            ...isset($this->colors[$theme]) ? $this->colors[$theme] : [],
+            ...$colors,
+        ];
 
         return $this;
     }
 
-    /**
-     * @return array<string, array{50: string, 100: string, 200: string, 300: string, 400: string, 500: string, 600: string, 700: string, 800: string, 900: string, 950: string}>
-     */
     public function getColors(): array
     {
-        $colors = static::$withDefaultColors ? static::defaultColors() : [];
+        $colors = static::$withDefaultColors
+            ? static::defaultColors()
+            : [];
 
-        foreach ($this->colors as $set) {
+        foreach ($this->colors as $theme => $set) {
             foreach ($set as $name => $color) {
-                $colors[$name] = $color;
+                $colors[$theme] = [
+                    ...isset($colors[$theme]) ? $colors[$theme] : [],
+                    $name => $color,
+                ];
             }
         }
 
@@ -43,15 +47,17 @@ class ColorManager
     {
         $variables = [];
 
-        foreach ($this->getColors() as $name => $shades) {
-            $variables = [
-                ...$variables,
-                ...$this->mapShades(name: $name, shades: $shades),
-            ];
+        foreach ($this->getColors() as $theme => $colors) {
+            foreach ($colors as $name => $shades) {
+                $variables[$theme] = [
+                    ...isset($variables[$theme]) ? $variables[$theme] : [],
+                    ...$this->mapShades(name: $name, shades: $shades),
+                ];
+            }
         }
 
         return view('blade-colors::assets', [
-            'colorVariables' => $variables,
+            'groupedColorVariables' => $variables,
         ])->render();
     }
 
@@ -73,12 +79,14 @@ class ColorManager
     public static function defaultColors(): array
     {
         return [
-            'danger' => Tailwind::RED,
-            'gray' => Tailwind::ZINC,
-            'info' => Tailwind::BLUE,
-            'primary' => Tailwind::INDIGO,
-            'success' => Tailwind::GREEN,
-            'warning' => Tailwind::AMBER,
+            'root' => [
+                'danger' => Tailwind::RED,
+                'gray' => Tailwind::ZINC,
+                'info' => Tailwind::BLUE,
+                'primary' => Tailwind::INDIGO,
+                'success' => Tailwind::GREEN,
+                'warning' => Tailwind::AMBER,
+            ],
         ];
     }
 
