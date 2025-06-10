@@ -4,22 +4,19 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/distortedfusion/blade-colors/ci.yml?branch=master&style=flat-square)](https://github.com/distortedfusion/blade-colors/actions)
 
-Blade Colors offers [Tailwind CSS](https://tailwindcss.com/) compatible, CSS variable based, color palettes. Color definitions can be configured dynamically during runtime using the provided [color manager](https://distortedfusion.com/docs/distortedfusion/blade-colors/usage).
-
 ```php
 <?php
 
 use DistortedFusion\BladeColors\Facades\BladeColor;
-use DistortedFusion\BladeColors\Palettes\Tailwind;
 
-BladeColor::register(['primary' => Tailwind::INDIGO]);
+BladeColor::register(['brand' => [
+    'primary'   => '#000000',
+    'secondary' => '#eaeaea',
+]]);
 ?>
 
 <!-- Applied directly using a CSS variable -->
-<div class="bg-[rgb(var(--primary-500))]"></div>
-
-<!-- Or with the optional additional presets -->
-<div class="bg-primary-500"></div>
+<div class="bg-[rgb(var(--brand-primary))]"></div>
 ```
 
 ## Documentation
