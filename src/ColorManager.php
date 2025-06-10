@@ -13,12 +13,12 @@ class ColorManager
 
     protected array $colors = [];
 
-    public function register(array $colors, ?string $theme = null): static
+    public function register(array $colors, ?string $selector = null): static
     {
-        $theme = is_null($theme) ? 'root' : $theme;
+        $selector = is_null($selector) ? ':root' : $selector;
 
-        $this->colors[$theme] = [
-            ...isset($this->colors[$theme]) ? $this->colors[$theme] : [],
+        $this->colors[$selector] = [
+            ...isset($this->colors[$selector]) ? $this->colors[$selector] : [],
             ...$colors,
         ];
 
@@ -31,10 +31,10 @@ class ColorManager
             ? static::defaultColors()
             : [];
 
-        foreach ($this->colors as $theme => $set) {
+        foreach ($this->colors as $selector => $set) {
             foreach ($set as $name => $color) {
-                $colors[$theme] = [
-                    ...isset($colors[$theme]) ? $colors[$theme] : [],
+                $colors[$selector] = [
+                    ...isset($colors[$selector]) ? $colors[$selector] : [],
                     $name => $color,
                 ];
             }
@@ -47,10 +47,10 @@ class ColorManager
     {
         $variables = [];
 
-        foreach ($this->getColors() as $theme => $colors) {
+        foreach ($this->getColors() as $selector => $colors) {
             foreach ($colors as $name => $shades) {
-                $variables[$theme] = [
-                    ...isset($variables[$theme]) ? $variables[$theme] : [],
+                $variables[$selector] = [
+                    ...isset($variables[$selector]) ? $variables[$selector] : [],
                     ...$this->mapShades(name: $name, shades: $shades),
                 ];
             }
@@ -85,7 +85,7 @@ class ColorManager
     public static function defaultColors(): array
     {
         return [
-            'root' => [
+            ':root' => [
                 'danger' => Tailwind::RED,
                 'gray' => Tailwind::ZINC,
                 'info' => Tailwind::BLUE,

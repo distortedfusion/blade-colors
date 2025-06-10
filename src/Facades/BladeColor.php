@@ -12,10 +12,10 @@ class BladeColor extends Facade
         return ColorManager::class;
     }
 
-    public static function register(array $colors, ?string $theme = null): void
+    public static function register(array $colors, ?string $selector = null): void
     {
-        static::resolved(function (ColorManager $colorManager) use ($colors, $theme) {
-            $colorManager->register(colors: $colors, theme: $theme);
+        static::resolved(function (ColorManager $colorManager) use ($colors, $selector) {
+            $colorManager->register(colors: $colors, selector: $selector);
         });
     }
 }
