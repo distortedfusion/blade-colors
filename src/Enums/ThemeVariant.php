@@ -10,8 +10,8 @@ enum ThemeVariant
     public function selector(): ?string
     {
         return match ($this) {
-            self::DARK => '.dark',
-            default => null,
+            self::DARK => '.dark, .inverse *',
+            default => ':root, .dark .inverse *',
         };
     }
 }
