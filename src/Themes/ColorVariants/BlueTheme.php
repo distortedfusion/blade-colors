@@ -55,7 +55,7 @@ class BlueTheme implements ThemeContract
             ThemeVariable::CARD_FOREGROUND->value => 'var(--foreground)',
 
             ThemeVariable::BORDER->value => 'hsl(214.3 31.8% 91.4%)',
-            ThemeVariable::INPUT->value => 'var(--border)',
+            ThemeVariable::INPUT->value => 'oklch(1 0 0)', // white
             ThemeVariable::RING->value => 'var(--primary)',
         ];
     }
@@ -86,6 +86,7 @@ class BlueTheme implements ThemeContract
             ThemeVariable::MUTED_FOREGROUND->value => 'hsl(215 20.2% 65.1%)',
 
             ThemeVariable::BORDER->value => 'hsl(217.2 32.6% 17.5%)',
+            ThemeVariable::INPUT->value => 'var(--border)',
         ];
     }
 }

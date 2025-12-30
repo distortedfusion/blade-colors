@@ -55,7 +55,7 @@ class GreenTheme implements ThemeContract
             ThemeVariable::CARD_FOREGROUND->value => 'var(--foreground)',
 
             ThemeVariable::BORDER->value => 'hsl(240 5.9% 90%)',
-            ThemeVariable::INPUT->value => 'var(--border)',
+            ThemeVariable::INPUT->value => 'oklch(1 0 0)', // white
             ThemeVariable::RING->value => 'var(--primary)',
         ];
     }
@@ -89,6 +89,7 @@ class GreenTheme implements ThemeContract
             ThemeVariable::CARD->value => 'hsl(24 9.8% 10%)',
 
             ThemeVariable::BORDER->value => 'hsl(240 3.7% 15.9%)',
+            ThemeVariable::INPUT->value => 'var(--border)',
         ];
     }
 }

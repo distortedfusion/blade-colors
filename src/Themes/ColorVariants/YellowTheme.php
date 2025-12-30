@@ -55,7 +55,7 @@ class YellowTheme implements ThemeContract
             ThemeVariable::CARD_FOREGROUND->value => 'var(--foreground)',
 
             ThemeVariable::BORDER->value => 'hsl(20 5.9% 90%)',
-            ThemeVariable::INPUT->value => 'var(--border)',
+            ThemeVariable::INPUT->value => 'oklch(1 0 0)', // white
             ThemeVariable::RING->value => 'var(--primary)',
         ];
     }
@@ -88,6 +88,7 @@ class YellowTheme implements ThemeContract
             ThemeVariable::CARD->value => 'hsl(20 14.3% 4.1%)',
 
             ThemeVariable::BORDER->value => 'hsl(12 6.5% 15.1%)',
+            ThemeVariable::INPUT->value => 'var(--border)',
         ];
     }
 }

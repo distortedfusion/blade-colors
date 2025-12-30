@@ -55,7 +55,7 @@ class RedTheme implements ThemeContract
             ThemeVariable::CARD_FOREGROUND->value => 'var(--foreground)',
 
             ThemeVariable::BORDER->value => 'hsl(0 0% 89.8%)',
-            ThemeVariable::INPUT->value => 'var(--border)',
+            ThemeVariable::INPUT->value => 'oklch(1 0 0)', // white
             ThemeVariable::RING->value => 'var(--primary)',
         ];
     }
@@ -87,6 +87,7 @@ class RedTheme implements ThemeContract
             ThemeVariable::MUTED_FOREGROUND->value => 'hsl(0 0% 63.9%)',
 
             ThemeVariable::BORDER->value => 'hsl(0 0% 14.9%)',
+            ThemeVariable::INPUT->value => 'var(--border)',
         ];
     }
 }

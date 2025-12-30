@@ -75,7 +75,7 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::CARD->value => 'oklch(14.5% 0 0)', // neutral-950
 
             ThemeVariable::BORDER->value => 'color-mix(in oklab, oklch(1 0 0) 10%, transparent)', // white/10
-            ThemeVariable::INPUT->value => 'color-mix(in oklab, oklch(1 0 0) 10%, transparent)', // white/10
+            ThemeVariable::INPUT->value => 'var(--border)',
 
             ThemeVariable::SUCCESS_FOREGROUND->value => 'oklch(87.1% 0.15 154.449)', // green-300
             ThemeVariable::INFO_FOREGROUND->value => 'oklch(80.9% 0.105 251.813)', // blue-300
