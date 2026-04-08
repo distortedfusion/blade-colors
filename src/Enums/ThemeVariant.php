@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DistortedFusion\BladeColors\Enums;
 
 enum ThemeVariant
@@ -10,8 +12,8 @@ enum ThemeVariant
     public function selector(): ?string
     {
         return match ($this) {
-            self::DARK => '.dark, .inverse *',
-            default => ':root, .dark .inverse *',
+            self::DARK => '.dark, .inverse',
+            default => ':root, .dark .inverse',
         };
     }
 }
