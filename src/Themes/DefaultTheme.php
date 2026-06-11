@@ -43,7 +43,7 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::CARD->value => 'var(--background)',
             ThemeVariable::CARD_FOREGROUND->value => 'var(--foreground)',
 
-            ThemeVariable::BORDER->value => 'color-mix(in oklab, var(--color-black) 10%, var(--background))',
+            ThemeVariable::BORDER->value => 'color-mix(in oklab, var(--color-black) 20%, var(--background))',
             ThemeVariable::INPUT->value => 'var(--color-white)',
             ThemeVariable::RING->value => 'var(--primary)',
 
@@ -76,7 +76,7 @@ class DefaultTheme implements ThemeContract
 
             ThemeVariable::CARD->value => 'var(--color-neutral-950)',
 
-            ThemeVariable::BORDER->value => 'color-mix(in oklab, var(--color-white) 10%, var(--background))',
+            ThemeVariable::BORDER->value => 'color-mix(in oklab, var(--color-white) 20%, var(--background))',
             ThemeVariable::INPUT->value => 'var(--border)',
 
             ThemeVariable::SUCCESS_FOREGROUND->value => 'var(--color-green-300)',
