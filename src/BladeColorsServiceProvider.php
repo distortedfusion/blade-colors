@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DistortedFusion\BladeColors;
 
 use Illuminate\Support\ServiceProvider;

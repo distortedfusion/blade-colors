@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DistortedFusion\BladeColors\Exceptions;
 
 use DistortedFusion\BladeColors\Contracts\ThemeContract;

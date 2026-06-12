@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DistortedFusion\BladeColors\Themes\ColorVariants;
 
 use DistortedFusion\BladeColors\Contracts\ThemeContract;

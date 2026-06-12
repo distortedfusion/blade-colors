@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DistortedFusion\BladeColors\Contracts;
 
 use DistortedFusion\BladeColors\Enums\ThemeVariant;
