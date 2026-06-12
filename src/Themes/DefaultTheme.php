@@ -68,7 +68,7 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::CARD->value => 'var(--background)',
             ThemeVariable::CARD_FOREGROUND->value => 'var(--foreground)',
 
-            ThemeVariable::BORDER->value => 'color-mix(in oklab, #000 20%, var(--background))',
+            ThemeVariable::BORDER->value => 'color-mix(in oklab, #000 10%, var(--background))',
             ThemeVariable::INPUT->value => '#fff',
             ThemeVariable::RING->value => 'var(--primary)',
 
