@@ -68,7 +68,7 @@ class DefaultTheme implements ThemeContract
             ThemeVariable::CARD->value => 'var(--background)',
             ThemeVariable::CARD_FOREGROUND->value => 'var(--foreground)',
 
-            ThemeVariable::BORDER->value => 'color-mix(in oklab, #000 10%, var(--background))',
+            ThemeVariable::BORDER->value => 'oklch(92.2% 0 0)', // neutral-200
             ThemeVariable::INPUT->value => '#fff',
             ThemeVariable::RING->value => 'var(--primary)',
 
@@ -101,8 +101,8 @@ class DefaultTheme implements ThemeContract
 
             ThemeVariable::CARD->value => 'oklch(14.5% 0 0)', // neutral-950
 
-            ThemeVariable::BORDER->value => 'color-mix(in oklab, #fff 20%, var(--background))',
-            ThemeVariable::INPUT->value => 'var(--border)',
+            ThemeVariable::BORDER->value => 'color-mix(in oklab, #fff 10%, transparent)',
+            ThemeVariable::INPUT->value => 'var(--accent)',
 
             ThemeVariable::SUCCESS_FOREGROUND->value => 'oklch(87.1% 0.15 154.449)', // green-300
             ThemeVariable::INFO_FOREGROUND->value => 'oklch(80.9% 0.105 251.813)',   // blue-300
