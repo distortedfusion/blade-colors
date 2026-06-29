@@ -30,6 +30,7 @@ use DistortedFusion\BladeColors\Enums\ThemeVariant;
  * --color-neutral-100: oklch(97% 0 0);
  * --color-neutral-400: oklch(70.8% 0 0);
  * --color-neutral-600: oklch(43.9% 0 0);
+ * --color-neutral-800: oklch(26.9% 0 0);
  * --color-neutral-900: oklch(20.5% 0 0);
  * --color-neutral-950: oklch(14.5% 0 0);
  */
@@ -101,7 +102,7 @@ class DefaultTheme implements ThemeContract
 
             ThemeVariable::CARD->value => 'oklch(14.5% 0 0)', // neutral-950
 
-            ThemeVariable::BORDER->value => 'color-mix(in oklab, #fff 10%, transparent)',
+            ThemeVariable::BORDER->value => 'oklch(26.9% 0 0)', // neutral-800
             ThemeVariable::INPUT->value => 'var(--accent)',
 
             ThemeVariable::SUCCESS_FOREGROUND->value => 'oklch(87.1% 0.15 154.449)', // green-300
