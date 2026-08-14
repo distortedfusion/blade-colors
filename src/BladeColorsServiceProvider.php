@@ -51,9 +51,7 @@ class BladeColorsServiceProvider extends ServiceProvider
     {
         $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
             $blade->directive('bladeColor', fn (): string => BladeColors::ddfsnStyles());
-
             $blade->directive('ddfsnStyles', fn (): string => BladeColors::ddfsnStyles());
-            $blade->directive('ddfsnScripts', fn (): string => BladeColors::ddfsnScripts());
         });
     }
 }

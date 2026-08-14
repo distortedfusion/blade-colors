@@ -11,11 +11,6 @@ trait ManagesAssets
         return "<?php echo \DistortedFusion\BladeColors\BladeColors::renderStyles() ?>";
     }
 
-    public static function ddfsnScripts(): string
-    {
-        return '';
-    }
-
     public static function renderStyles(): string
     {
         $variables = [];
